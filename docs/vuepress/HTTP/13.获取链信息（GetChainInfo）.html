@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>13.获取链信息（GetChainInfo）</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c781564.css" as="style"><link rel="preload" href="/assets/js/app.38cc996f.js" as="script"><link rel="preload" href="/assets/js/2.f7158d95.js" as="script"><link rel="preload" href="/assets/js/8.cc985621.js" as="script"><link rel="prefetch" href="/assets/js/10.31028145.js"><link rel="prefetch" href="/assets/js/11.564f83f7.js"><link rel="prefetch" href="/assets/js/12.f3baece6.js"><link rel="prefetch" href="/assets/js/13.d59a264a.js"><link rel="prefetch" href="/assets/js/14.bdd6c0ef.js"><link rel="prefetch" href="/assets/js/15.dc7e82bb.js"><link rel="prefetch" href="/assets/js/16.13a8c494.js"><link rel="prefetch" href="/assets/js/17.0148c2b6.js"><link rel="prefetch" href="/assets/js/18.45741fab.js"><link rel="prefetch" href="/assets/js/19.b11e29a3.js"><link rel="prefetch" href="/assets/js/20.938d7c1c.js"><link rel="prefetch" href="/assets/js/21.b90f628b.js"><link rel="prefetch" href="/assets/js/22.9ee24609.js"><link rel="prefetch" href="/assets/js/23.96fa25dc.js"><link rel="prefetch" href="/assets/js/24.02ec8fa8.js"><link rel="prefetch" href="/assets/js/25.743d34d8.js"><link rel="prefetch" href="/assets/js/26.746d6ac1.js"><link rel="prefetch" href="/assets/js/3.dc9b4438.js"><link rel="prefetch" href="/assets/js/4.c40afcfe.js"><link rel="prefetch" href="/assets/js/5.364f42a3.js"><link rel="prefetch" href="/assets/js/6.97db3be2.js"><link rel="prefetch" href="/assets/js/7.e6a3e4c7.js"><link rel="prefetch" href="/assets/js/9.0e18b323.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c781564.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>入门</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/thinkey/WhatIsThinkey.html" class="sidebar-link">什么是   ？</a></li><li><a href="/thinkey/Thinkey'sTechnicalFeatures.html" class="sidebar-link">的技术特点</a></li><li><a href="/thinkey/BlockchainBrowser.html" class="sidebar-link">区块链浏览器</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>开发文档</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_13-获取链信息（getchaininfo）"><a href="#_13-获取链信息（getchaininfo）" aria-hidden="true" class="header-anchor">#</a> 13.获取链信息（GetChainInfo）</h1> <p><a href="https://nodesource.com/products/nsolid" target="_blank" rel="noopener noreferrer"><img src="https://cldup.com/dTxpPi9lDf.thumb.png" alt="N|Solid"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://travis-ci.org/joemccann/dillinger" target="_blank" rel="noopener noreferrer"><img src="https://travis-ci.org/joemccann/dillinger.svg?branch=master" alt="Build Status"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.</p> <p>请求参数</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">method</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用的方法</td></tr> <tr><td style="text-align:center;">params</td> <td style="text-align:center;">dict</td> <td style="text-align:center;">true</td> <td style="text-align:center;">参数</td></tr></tbody></table> <p>params:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">chainIds</td> <td style="text-align:center;">[]int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链id（备注：传空代表所有）</td></tr></tbody></table> <p>响应参数:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">[]</td> <td style="text-align:center;">[]chainInfo</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链信息数组</td></tr></tbody></table> <p>chainInfo：</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">chainId</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链id</td></tr> <tr><td style="text-align:center;">datanodes</td> <td style="text-align:center;">dataNode[]</td> <td style="text-align:center;">true</td> <td style="text-align:center;">数据节点群</td></tr> <tr><td style="text-align:center;">mode</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">模式</td></tr> <tr><td style="text-align:center;">parent</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">父</td></tr></tbody></table> <p>dataNode：</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">dataNodeId</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">数据节点id</td></tr> <tr><td style="text-align:center;">dataNodeIp</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">数据节点ip</td></tr> <tr><td style="text-align:center;">dataNodePort</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">数据节点端口</td></tr></tbody></table> <p>请求示例:</p> <div class="language- extra-class"><pre class="language-text"><code>URL : test.thinkey.xyz
+method : POST
+request body :
+{
+&quot;method&quot;: &quot;GetChainInfo&quot;,
+&quot;params&quot;: {&quot;chainIds&quot;:[]}
+}
+Response
+[
+{
+&quot;chainId&quot;: 0,
+&quot;datanodes&quot;: [
+{
+&quot;dataNodeId&quot;: &quot;0x5e17128ba224a96d6e84be0c7f899febea26c55c78940610d78a0d22dbd0ab03cc3233491de0b5eb770dbf850b509bd191723df4fc40520bcbab565d46543d6e&quot;,
+&quot;dataNodeIp&quot;: &quot;192.168.1.13&quot;,
+&quot;dataNodePort&quot;: 22010
+}
+],
+&quot;mode&quot;: 5,
+&quot;parent&quot;: 1048576
+},
+{
+&quot;chainId&quot;: 1,
+&quot;datanodes&quot;: [
+{
+&quot;dataNodeId&quot;: &quot;0x96dc94580e0eadd78691807f6eac9759b9964daa8b46da4378902b040e0eb102cb48413308d2131e9e5557321f30ba9287794f689854e6d2e63928a082e79286&quot;,
+&quot;dataNodeIp&quot;: &quot;192.168.1.13&quot;,
+&quot;dataNodePort&quot;: 22014
+}
+],
+&quot;mode&quot;: 6,
+&quot;parent&quot;: 0
+},
+{
+&quot;chainId&quot;: 2,
+&quot;datanodes&quot;: [
+{
+&quot;dataNodeId&quot;: &quot;0xa93b150f11c422d8700554859281be8e34a91a859e0e021af186002c7e4a2661ea2467a63b417030d68e2fdddeb4342943dff13225da77124abf912fd092f71f&quot;,
+&quot;dataNodeIp&quot;: &quot;192.168.1.13&quot;,
+&quot;dataNodePort&quot;: 22018
+}
+],
+&quot;mode&quot;: 6,
+&quot;parent&quot;: 0
+},
+{
+&quot;chainId&quot;: 3,
+&quot;datanodes&quot;: [
+{
+&quot;dataNodeId&quot;: &quot;0x783f4b2490461ecfd8ee8d3451e434de06bacb0ffff56de53a33fe545589094fa0b929eeaa62dc5203d1e831ccdd37d206d0b85b193921efb223bf0cb2f37b4c&quot;,
+&quot;dataNodeIp&quot;: &quot;192.168.1.13&quot;,
+&quot;dataNodePort&quot;: 22022
+}
+],
+&quot;mode&quot;: 7,
+&quot;parent&quot;: 1
+},
+{
+&quot;chainId&quot;: 4,
+&quot;datanodes&quot;: [
+{
+&quot;dataNodeId&quot;: &quot;0x44c98ab831f3ca4553e491bba06753e959ceb55d43e18bc76539572feb1e0dbaf2fbfc19f571d6544e82be1c7c39760f6a023d4be4dcb9473dd580c731d03926&quot;,
+&quot;dataNodeIp&quot;: &quot;192.168.1.13&quot;,
+&quot;dataNodePort&quot;: 22026
+}
+],
+&quot;mode&quot;: 7,
+&quot;parent&quot;: 1
+}
+]
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.38cc996f.js" defer></script><script src="/assets/js/2.f7158d95.js" defer></script><script src="/assets/js/8.cc985621.js" defer></script>
+  </body>
+</html>

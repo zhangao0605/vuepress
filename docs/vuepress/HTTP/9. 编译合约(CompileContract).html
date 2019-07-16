@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>9. 编译合约(CompileContract)</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c781564.css" as="style"><link rel="preload" href="/assets/js/app.38cc996f.js" as="script"><link rel="preload" href="/assets/js/2.f7158d95.js" as="script"><link rel="preload" href="/assets/js/17.0148c2b6.js" as="script"><link rel="prefetch" href="/assets/js/10.31028145.js"><link rel="prefetch" href="/assets/js/11.564f83f7.js"><link rel="prefetch" href="/assets/js/12.f3baece6.js"><link rel="prefetch" href="/assets/js/13.d59a264a.js"><link rel="prefetch" href="/assets/js/14.bdd6c0ef.js"><link rel="prefetch" href="/assets/js/15.dc7e82bb.js"><link rel="prefetch" href="/assets/js/16.13a8c494.js"><link rel="prefetch" href="/assets/js/18.45741fab.js"><link rel="prefetch" href="/assets/js/19.b11e29a3.js"><link rel="prefetch" href="/assets/js/20.938d7c1c.js"><link rel="prefetch" href="/assets/js/21.b90f628b.js"><link rel="prefetch" href="/assets/js/22.9ee24609.js"><link rel="prefetch" href="/assets/js/23.96fa25dc.js"><link rel="prefetch" href="/assets/js/24.02ec8fa8.js"><link rel="prefetch" href="/assets/js/25.743d34d8.js"><link rel="prefetch" href="/assets/js/26.746d6ac1.js"><link rel="prefetch" href="/assets/js/3.dc9b4438.js"><link rel="prefetch" href="/assets/js/4.c40afcfe.js"><link rel="prefetch" href="/assets/js/5.364f42a3.js"><link rel="prefetch" href="/assets/js/6.97db3be2.js"><link rel="prefetch" href="/assets/js/7.e6a3e4c7.js"><link rel="prefetch" href="/assets/js/8.cc985621.js"><link rel="prefetch" href="/assets/js/9.0e18b323.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c781564.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>入门</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/thinkey/WhatIsThinkey.html" class="sidebar-link">什么是   ？</a></li><li><a href="/thinkey/Thinkey'sTechnicalFeatures.html" class="sidebar-link">的技术特点</a></li><li><a href="/thinkey/BlockchainBrowser.html" class="sidebar-link">区块链浏览器</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>开发文档</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="content__default"><h1 id="_9-编译合约-compilecontract"><a href="#_9-编译合约-compilecontract" aria-hidden="true" class="header-anchor">#</a> 9. 编译合约(CompileContract)</h1> <p>请求参数</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">method</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用的方法</td></tr> <tr><td style="text-align:center;">params</td> <td style="text-align:center;">dict</td> <td style="text-align:center;">true</td> <td style="text-align:center;">参数</td></tr></tbody></table> <p>params:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">chainId</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链id</td></tr> <tr><td style="text-align:center;">contract</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">合约代码</td></tr></tbody></table> <p>响应参数:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">code</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">编译后的合约代码</td></tr> <tr><td style="text-align:center;">info</td> <td style="text-align:center;">dict</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易信息</td></tr></tbody></table> <p>请求示例:</p> <div class="language- extra-class"><pre class="language-text"><code>URL : test.thinkey.xyz
+method : POST
+request body :
+{
+&quot;method&quot;: &quot;CompileContract&quot;,
+&quot;params&quot;: {
+&quot;chainId&quot;: &quot;2&quot;,
+&quot;contract&quot;: &quot;pragma solidity &gt;= 0.4.22;contract test {function multiply(uint a) public returns(uint d) {return a * 7;}}&quot;
+}
+}
+response:
+{
+ &quot;test&quot;: {
+&quot;code&quot;: &quot;0x608060405234801561001057600080fd5b5060ad8061001f6000396000f3fe608060405260043610603e5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663c6888fa181146043575b600080fd5b348015604e57600080fd5b50606960048036036020811015606357600080fd5b5035607b565b60408051918252519081900360200190f35b6007029056fea165627a7a72305820d26cbd37639edad7e8b69df35b54fdcb75d532db2c98b3a0703a7fb056faa6470029&quot;,
+&quot;info&quot;: {
+&quot;abiDefinition&quot;: [
+{
+&quot;constant&quot;: false,
+&quot;inputs&quot;: [
+{
+&quot;name&quot;: &quot;a&quot;,
+&quot;type&quot;: &quot;uint256&quot;
+}
+],
+&quot;name&quot;: &quot;multiply&quot;,
+&quot;outputs&quot;: [
+{
+&quot;name&quot;: &quot;d&quot;,
+&quot;type&quot;: &quot;uint256&quot;
+}
+],
+&quot;payable&quot;: false,
+&quot;stateMutability&quot;: &quot;nonpayable&quot;,
+&quot;type&quot;: &quot;function&quot;
+}
+],
+&quot;compilerOptions&quot;: &quot;--combined-json bin,abi,userdoc,devdoc,metadata --optimize&quot;,
+&quot;compilerVersion&quot;: &quot;0.5.0&quot;,
+&quot;developerDoc&quot;: {
+&quot;methods&quot;: {}
+},
+&quot;language&quot;: &quot;Solidity&quot;,
+&quot;languageVersion&quot;: &quot;0.5.0&quot;,
+&quot;metadata&quot;: &quot;{\&quot;compiler\&quot;:{\&quot;version\&quot;:\&quot;0.5.0+commit.1d4f565a\&quot;},\&quot;language\&quot;:\&quot;Solidity\&quot;,\&quot;output\&quot;:{\&quot;abi\&quot;:[{\&quot;constant\&quot;:false,\&quot;inputs\&quot;:[{\&quot;name\&quot;:\&quot;a\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;}],\&quot;name\&quot;:\&quot;multiply\&quot;,\&quot;outputs\&quot;:[{\&quot;name\&quot;:\&quot;d\&quot;,\&quot;type\&quot;:\&quot;uint256\&quot;}],\&quot;payable\&quot;:false,\&quot;stateMutability\&quot;:\&quot;nonpayable\&quot;,\&quot;type\&quot;:\&quot;function\&quot;}],\&quot;devdoc\&quot;:{\&quot;methods\&quot;:{}},\&quot;userdoc\&quot;:{\&quot;methods\&quot;:{}}},\&quot;settings\&quot;:{\&quot;compilationTarget\&quot;:{\&quot;&lt;stdin&gt;\&quot;:\&quot;test\&quot;},\&quot;evmVersion\&quot;:\&quot;byzantium\&quot;,\&quot;libraries\&quot;:{},\&quot;optimizer\&quot;:{\&quot;enabled\&quot;:true,\&quot;runs\&quot;:200},\&quot;remappings\&quot;:[]},\&quot;sources\&quot;:{\&quot;&lt;stdin&gt;\&quot;:{\&quot;keccak256\&quot;:\&quot;0xc7df116e7b6e9c39c2f57375536b0d3896ffe1c90f0cc06af060d0288c159160\&quot;,\&quot;urls\&quot;:[\&quot;bzzr://061b1e95fa8cbd6b3735fabda329ea640c185c5d9e5dc6aa361ceabbf0109749\&quot;]}},\&quot;version\&quot;:1}&quot;,
+&quot;source&quot;: &quot;pragma solidity &gt;= 0.4.22;contract test {function multiply(uint a) public returns(uint d) {return a * 7;}}&quot;,
+&quot;userDoc&quot;: {
+&quot;methods&quot;: {}
+}
+}
+}
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.38cc996f.js" defer></script><script src="/assets/js/2.f7158d95.js" defer></script><script src="/assets/js/17.0148c2b6.js" defer></script>
+  </body>
+</html>

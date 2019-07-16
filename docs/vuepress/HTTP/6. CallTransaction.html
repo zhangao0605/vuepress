@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>6. CallTransaction</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c781564.css" as="style"><link rel="preload" href="/assets/js/app.38cc996f.js" as="script"><link rel="preload" href="/assets/js/2.f7158d95.js" as="script"><link rel="preload" href="/assets/js/14.bdd6c0ef.js" as="script"><link rel="prefetch" href="/assets/js/10.31028145.js"><link rel="prefetch" href="/assets/js/11.564f83f7.js"><link rel="prefetch" href="/assets/js/12.f3baece6.js"><link rel="prefetch" href="/assets/js/13.d59a264a.js"><link rel="prefetch" href="/assets/js/15.dc7e82bb.js"><link rel="prefetch" href="/assets/js/16.13a8c494.js"><link rel="prefetch" href="/assets/js/17.0148c2b6.js"><link rel="prefetch" href="/assets/js/18.45741fab.js"><link rel="prefetch" href="/assets/js/19.b11e29a3.js"><link rel="prefetch" href="/assets/js/20.938d7c1c.js"><link rel="prefetch" href="/assets/js/21.b90f628b.js"><link rel="prefetch" href="/assets/js/22.9ee24609.js"><link rel="prefetch" href="/assets/js/23.96fa25dc.js"><link rel="prefetch" href="/assets/js/24.02ec8fa8.js"><link rel="prefetch" href="/assets/js/25.743d34d8.js"><link rel="prefetch" href="/assets/js/26.746d6ac1.js"><link rel="prefetch" href="/assets/js/3.dc9b4438.js"><link rel="prefetch" href="/assets/js/4.c40afcfe.js"><link rel="prefetch" href="/assets/js/5.364f42a3.js"><link rel="prefetch" href="/assets/js/6.97db3be2.js"><link rel="prefetch" href="/assets/js/7.e6a3e4c7.js"><link rel="prefetch" href="/assets/js/8.cc985621.js"><link rel="prefetch" href="/assets/js/9.0e18b323.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c781564.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>入门</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/thinkey/WhatIsThinkey.html" class="sidebar-link">什么是   ？</a></li><li><a href="/thinkey/Thinkey'sTechnicalFeatures.html" class="sidebar-link">的技术特点</a></li><li><a href="/thinkey/BlockchainBrowser.html" class="sidebar-link">区块链浏览器</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>开发文档</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_6-calltransaction"><a href="#_6-calltransaction" aria-hidden="true" class="header-anchor">#</a> 6. CallTransaction</h1> <p>请求参数</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">method</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用的方法</td></tr> <tr><td style="text-align:center;">params</td> <td style="text-align:center;">dict</td> <td style="text-align:center;">true</td> <td style="text-align:center;">参数</td></tr></tbody></table> <p>params:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">chainId</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链id</td></tr> <tr><td style="text-align:center;">from</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易发起账户地址</td></tr> <tr><td style="text-align:center;">to</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易接受账户地址</td></tr> <tr><td style="text-align:center;">nonce</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易的发起者在之前进行过的交易数量</td></tr> <tr><td style="text-align:center;">value</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">转账金额</td></tr> <tr><td style="text-align:center;">input</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用合约时的参数</td></tr></tbody></table> <p>响应参数:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">Transaction</td> <td style="text-align:center;">dict</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易详情</td></tr> <tr><td style="text-align:center;">hash</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易hash</td></tr> <tr><td style="text-align:center;">status</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易状态: 1:成功, 0:失败</td></tr> <tr><td style="text-align:center;">logs</td> <td style="text-align:center;">array[dict]</td> <td style="text-align:center;">true</td> <td style="text-align:center;">这个交易产生的日志对象数组</td></tr> <tr><td style="text-align:center;">transactionHash</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易hash</td></tr> <tr><td style="text-align:center;">contractAddress</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">合约账户地址</td></tr> <tr><td style="text-align:center;">out</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用返回结果数据</td></tr></tbody></table> <p>Transaction:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">chainId</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链id</td></tr> <tr><td style="text-align:center;">from</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易发起账户地址</td></tr> <tr><td style="text-align:center;">to</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易接受账户地址</td></tr> <tr><td style="text-align:center;">nonce</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易的发起者在之前进行过的交易数量</td></tr> <tr><td style="text-align:center;">val</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">转账金额</td></tr> <tr><td style="text-align:center;">input</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用合约时的参数</td></tr></tbody></table> <p>请求示例:</p> <div class="language- extra-class"><pre class="language-text"><code>URL : test.thinkey.xyz
+method : POST
+request body :
+{
+&quot;method&quot;: &quot;CallTransaction&quot;,
+&quot;params&quot;: {
+&quot;chainId&quot;: &quot;2&quot;,
+&quot;from&quot;: &quot;0x0000000000000000000000000000000000000000&quot;,
+&quot;to&quot;: &quot;0x0e50cea0402d2a396b0db1c5d08155bd219cc52e&quot;,
+&quot;nonce&quot;: &quot;15&quot;,
+&quot;value&quot;: &quot;0&quot;,
+&quot;input&quot;: &quot;0xdfc02018&quot;
+}
+}
+response:
+{
+&quot;Transaction&quot;: {
+&quot;chainId&quot;: 0,
+&quot;from&quot;: &quot;0x0000000000000000000000000000000000000000&quot;,
+&quot;to&quot;: &quot;0x0e50cea0402d2a396b0db1c5d08155bd219cc52e&quot;,
+&quot;nonce&quot;: 0,
+&quot;value&quot;: 0,
+&quot;input&quot;: &quot;0xdfc02018&quot;,
+&quot;hash&quot;: &quot;&quot;,
+&quot;timestamp&quot;: 0
+},
+&quot;root&quot;: &quot;&quot;,
+&quot;status&quot;: 1,
+&quot;logs&quot;: &quot;&quot;,
+&quot;transactionHash&quot;: &quot;0x1b27b7e64269adeafec1a7ee450eec6fdeab8cc4f0e56744d9e149a4d1b1131f&quot;,
+&quot;contractAddress&quot;: &quot;0x0000000000000000000000000000000000000000&quot;,
+&quot;out&quot;: &quot;0x&quot;,
+&quot;blockHeight&quot;: 0
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.38cc996f.js" defer></script><script src="/assets/js/2.f7158d95.js" defer></script><script src="/assets/js/14.bdd6c0ef.js" defer></script>
+  </body>
+</html>

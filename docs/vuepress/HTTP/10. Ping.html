@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10. Ping</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c781564.css" as="style"><link rel="preload" href="/assets/js/app.38cc996f.js" as="script"><link rel="preload" href="/assets/js/2.f7158d95.js" as="script"><link rel="preload" href="/assets/js/5.364f42a3.js" as="script"><link rel="prefetch" href="/assets/js/10.31028145.js"><link rel="prefetch" href="/assets/js/11.564f83f7.js"><link rel="prefetch" href="/assets/js/12.f3baece6.js"><link rel="prefetch" href="/assets/js/13.d59a264a.js"><link rel="prefetch" href="/assets/js/14.bdd6c0ef.js"><link rel="prefetch" href="/assets/js/15.dc7e82bb.js"><link rel="prefetch" href="/assets/js/16.13a8c494.js"><link rel="prefetch" href="/assets/js/17.0148c2b6.js"><link rel="prefetch" href="/assets/js/18.45741fab.js"><link rel="prefetch" href="/assets/js/19.b11e29a3.js"><link rel="prefetch" href="/assets/js/20.938d7c1c.js"><link rel="prefetch" href="/assets/js/21.b90f628b.js"><link rel="prefetch" href="/assets/js/22.9ee24609.js"><link rel="prefetch" href="/assets/js/23.96fa25dc.js"><link rel="prefetch" href="/assets/js/24.02ec8fa8.js"><link rel="prefetch" href="/assets/js/25.743d34d8.js"><link rel="prefetch" href="/assets/js/26.746d6ac1.js"><link rel="prefetch" href="/assets/js/3.dc9b4438.js"><link rel="prefetch" href="/assets/js/4.c40afcfe.js"><link rel="prefetch" href="/assets/js/6.97db3be2.js"><link rel="prefetch" href="/assets/js/7.e6a3e4c7.js"><link rel="prefetch" href="/assets/js/8.cc985621.js"><link rel="prefetch" href="/assets/js/9.0e18b323.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c781564.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>入门</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/thinkey/WhatIsThinkey.html" class="sidebar-link">什么是   ？</a></li><li><a href="/thinkey/Thinkey'sTechnicalFeatures.html" class="sidebar-link">的技术特点</a></li><li><a href="/thinkey/BlockchainBrowser.html" class="sidebar-link">区块链浏览器</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>开发文档</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_10-ping"><a href="#_10-ping" aria-hidden="true" class="header-anchor">#</a> 10. Ping</h1> <p>请求参数</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">method</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用的方法</td></tr> <tr><td style="text-align:center;">params</td> <td style="text-align:center;">dict</td> <td style="text-align:center;">true</td> <td style="text-align:center;">参数</td></tr></tbody></table> <p>params:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">address</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">ip+端口</td></tr></tbody></table> <p>响应参数:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">nodeId</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">节点id</td></tr> <tr><td style="text-align:center;">version</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">版本</td></tr> <tr><td style="text-align:center;">isDataNode</td> <td style="text-align:center;">bool</td> <td style="text-align:center;">true</td> <td style="text-align:center;">是否是数据节点</td></tr> <tr><td style="text-align:center;">dataNodeOf</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">数据节点</td></tr> <tr><td style="text-align:center;">lastMsgTime</td> <td style="text-align:center;">int64</td> <td style="text-align:center;">true</td> <td style="text-align:center;">上一个信息时间</td></tr> <tr><td style="text-align:center;">lastEventTime</td> <td style="text-align:center;">int64</td> <td style="text-align:center;">true</td> <td style="text-align:center;">上一个事件时间</td></tr> <tr><td style="text-align:center;">lastBlockTime</td> <td style="text-align:center;">int64</td> <td style="text-align:center;">true</td> <td style="text-align:center;">上一个块时间</td></tr> <tr><td style="text-align:center;">overflow</td> <td style="text-align:center;">bool</td> <td style="text-align:center;">true</td> <td style="text-align:center;">溢出</td></tr> <tr><td style="text-align:center;">lastBlocks</td> <td style="text-align:center;">map</td> <td style="text-align:center;">true</td> <td style="text-align:center;">最后一个块</td></tr> <tr><td style="text-align:center;">opTypes</td> <td style="text-align:center;">map</td> <td style="text-align:center;">true</td> <td style="text-align:center;">类型</td></tr></tbody></table> <p>请求示例:</p> <div class="language- extra-class"><pre class="language-text"><code>URL : test.thinkey.xyz
+method : POST
+request body :
+{
+&quot;method&quot;: &quot;Ping&quot;,
+&quot;params&quot;: {&quot;address&quot;:&quot;192.168.1.13:22010&quot;}
+}
+Response:
+{
+&quot;nodeId&quot;: &quot;0x5e17128ba224a96d6e84be0c7f899febea26c55c78940610d78a0d22dbd0ab03cc3233491de0b5eb770dbf850b509bd191723df4fc40520bcbab565d46543d6e&quot;,
+&quot;version&quot;: &quot;V1.0.0&quot;,
+&quot;isDataNode&quot;: true,
+&quot;dataNodeOf&quot;: 0,
+&quot;lastMsgTime&quot;: 1560850367,
+&quot;lastEventTime&quot;: 1560850367,
+&quot;lastBlockTime&quot;: 1560850367,
+&quot;overflow&quot;: false,
+&quot;lastBlocks&quot;: {
+&quot;0&quot;: 159927
+},
+&quot;opTypes&quot;: {
+&quot;0&quot;: [
+&quot;DATA&quot;
+]
+}
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.38cc996f.js" defer></script><script src="/assets/js/2.f7158d95.js" defer></script><script src="/assets/js/5.364f42a3.js" defer></script>
+  </body>
+</html>

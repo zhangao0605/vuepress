@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5. 获取指定账户在对应链上一定高度范围内的交易信息(GetTransactions)</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c781564.css" as="style"><link rel="preload" href="/assets/js/app.38cc996f.js" as="script"><link rel="preload" href="/assets/js/2.f7158d95.js" as="script"><link rel="preload" href="/assets/js/13.d59a264a.js" as="script"><link rel="prefetch" href="/assets/js/10.31028145.js"><link rel="prefetch" href="/assets/js/11.564f83f7.js"><link rel="prefetch" href="/assets/js/12.f3baece6.js"><link rel="prefetch" href="/assets/js/14.bdd6c0ef.js"><link rel="prefetch" href="/assets/js/15.dc7e82bb.js"><link rel="prefetch" href="/assets/js/16.13a8c494.js"><link rel="prefetch" href="/assets/js/17.0148c2b6.js"><link rel="prefetch" href="/assets/js/18.45741fab.js"><link rel="prefetch" href="/assets/js/19.b11e29a3.js"><link rel="prefetch" href="/assets/js/20.938d7c1c.js"><link rel="prefetch" href="/assets/js/21.b90f628b.js"><link rel="prefetch" href="/assets/js/22.9ee24609.js"><link rel="prefetch" href="/assets/js/23.96fa25dc.js"><link rel="prefetch" href="/assets/js/24.02ec8fa8.js"><link rel="prefetch" href="/assets/js/25.743d34d8.js"><link rel="prefetch" href="/assets/js/26.746d6ac1.js"><link rel="prefetch" href="/assets/js/3.dc9b4438.js"><link rel="prefetch" href="/assets/js/4.c40afcfe.js"><link rel="prefetch" href="/assets/js/5.364f42a3.js"><link rel="prefetch" href="/assets/js/6.97db3be2.js"><link rel="prefetch" href="/assets/js/7.e6a3e4c7.js"><link rel="prefetch" href="/assets/js/8.cc985621.js"><link rel="prefetch" href="/assets/js/9.0e18b323.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c781564.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>入门</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/thinkey/WhatIsThinkey.html" class="sidebar-link">什么是   ？</a></li><li><a href="/thinkey/Thinkey'sTechnicalFeatures.html" class="sidebar-link">的技术特点</a></li><li><a href="/thinkey/BlockchainBrowser.html" class="sidebar-link">区块链浏览器</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>开发文档</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="content__default"><h1 id="_5-获取指定账户在对应链上一定高度范围内的交易信息-gettransactions"><a href="#_5-获取指定账户在对应链上一定高度范围内的交易信息-gettransactions" aria-hidden="true" class="header-anchor">#</a> 5. 获取指定账户在对应链上一定高度范围内的交易信息(GetTransactions)</h1> <p>请求参数</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">method</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用的方法</td></tr> <tr><td style="text-align:center;">params</td> <td style="text-align:center;">dict</td> <td style="text-align:center;">true</td> <td style="text-align:center;">参数</td></tr></tbody></table> <p>params:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">chainId</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链id</td></tr> <tr><td style="text-align:center;">address</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链地址</td></tr> <tr><td style="text-align:center;">startHeight</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">查询的起始块高</td></tr> <tr><td style="text-align:center;">endHeight</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">查询的截止块高</td></tr></tbody></table> <p>响应参数:</p> <table><thead><tr><th style="text-align:center;">参数名</th> <th style="text-align:center;">类型</th> <th style="text-align:center;">是否必须</th> <th style="text-align:center;">含义</th></tr></thead> <tbody><tr><td style="text-align:center;">chainId</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">链id</td></tr> <tr><td style="text-align:center;">height</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">查询的起始块高</td></tr> <tr><td style="text-align:center;">from</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易发起账户地址</td></tr> <tr><td style="text-align:center;">to</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易接受账户地址</td></tr> <tr><td style="text-align:center;">nonce</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易的发起者在之前进行过的交易数量</td></tr> <tr><td style="text-align:center;">value</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">转账金额</td></tr> <tr><td style="text-align:center;">timestamp</td> <td style="text-align:center;">int</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易的时间戳</td></tr> <tr><td style="text-align:center;">input</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">调用合约时的参数</td></tr> <tr><td style="text-align:center;">hash</td> <td style="text-align:center;">string</td> <td style="text-align:center;">true</td> <td style="text-align:center;">交易hash</td></tr></tbody></table> <p>请求示例:</p> <div class="language- extra-class"><pre class="language-text"><code>URL : test.thinkey.xyz
+method : POST
+request body :
+{
+&quot;method&quot;: &quot;GetTransactions&quot;,
+&quot;params&quot;: {&quot;chainId&quot;:&quot;2&quot;,&quot;address&quot;:&quot;0x2c7536e3605d9c16a7a3d7b1898e529396a65c23&quot;, &quot;startHeight&quot;:&quot;50&quot;, &quot;endHeight&quot;:&quot;100&quot;}
+}
+response:
+[
+{
+&quot;chainid&quot;: 2,
+&quot;from&quot;: &quot;0x2c7536e3605d9c16a7a3d7b1898e529396a65c23&quot;,
+&quot;to&quot;: “0x0000000000000000000000000000000000020000”,
+&quot;nonce&quot;: 0,
+&quot;value&quot;: 0,
+&quot;input&quot;: &quot;0x000000022c7536e3605d9c16a7a3d7b1898e529396a65c230000000000000000000000034fa1c4e6182b6b7f3bca273390cf587b50b4731100000000000456440101&quot;,
+&quot;hash&quot;: &quot;0x0ea5dad47833fc6286357b6bd6c1a4e910def5f4432a1a59bde0f816c3dd18e0&quot;,
+&quot;timestamp&quot;: 1560425588
+},
+{
+&quot;chainid&quot;: 2,
+&quot;from&quot;: &quot;0x2c7536e3605d9c16a7a3d7b1898e529396a65c23&quot;,
+&quot;to&quot;: &quot;0x133c5bfef5d486052b061b44af113f20057341a8&quot;,
+&quot;nonce&quot;: 1,
+&quot;value&quot;: 0,
+&quot;input&quot;: &quot;0xa9059cbb00000000000000000000000066261e3faf00ef1537b22f37d8db85f57066f58f0000000000000000000000000000000000000000000000000000000000004e20&quot;,
+&quot;hash&quot;: &quot;0x1dbbda2d229db82ff12b3bea82d49225e6bebd645def4c06da157ddbe5660066&quot;,
+&quot;timestamp&quot;: 1560425596
+}
+]
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.38cc996f.js" defer></script><script src="/assets/js/2.f7158d95.js" defer></script><script src="/assets/js/13.d59a264a.js" defer></script>
+  </body>
+</html>
